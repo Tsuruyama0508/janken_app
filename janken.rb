@@ -29,6 +29,7 @@ def janken
  
  else 
  puts "終了します"
+ return "false"
  end
 
 end
@@ -52,23 +53,23 @@ def attimuite(winner)
  puts "-----------------------------------------"
  
  if player_finger == cpu_finger
-  puts "#{winner}の勝ちです。ゲームを終わります"
+  puts "#{winner}の勝ちです。"
+  puts "ゲームを終了します"
   exit
  else
   puts "もう一回！じゃんけん・・・"
-  janken
-  
+  while janken == "true"
+   janken
+  end
  end 
  
 end 
 
 janken
 
-while janken == "true"
+while janken == "true" 
  janken
-end 
-
-
+end
 
  
 
